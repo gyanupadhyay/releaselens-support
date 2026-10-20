@@ -4,9 +4,9 @@ Public documentation and issue tracking for the ReleaseLens AI VS Code extension
 
 Public pre-release download: https://github.com/gyanupadhyay/releaselens-support/releases/tag/v0.2.0
 
-Install the public Marketplace pre-release: https://marketplace.visualstudio.com/items?itemName=gyanupadhyay.releaselens-ai
+Marketplace package submitted: https://marketplace.visualstudio.com/items?itemName=gyanupadhyay.releaselens-ai
 
-In VS Code choose Install Pre-Release Version. The downloadable VSIX is also available for manual installation.
+The Marketplace version is not yet marked validated and its listing currently returns 404. Use the verified GitHub release VSIX for manual installation while Marketplace validation is unresolved.
 
 The 0.2.0 pre-release records reviewed Android emulator and web scenarios, composes MP4 videos with local system narration and captions, and matches PR metadata to registered scenario tags. Cloud AI planning and ElevenLabs are disabled; no cloud speech or AI account is required. iOS and physical-device farms are not supported.
 
