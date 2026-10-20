@@ -61,6 +61,10 @@ Every registry assertion must appear in its flow. Narration starts only after th
 
 Set `web.selectorEngine` to `flutter-semantics`. Add stable `Semantics(identifier: 'task-input', child: ...)` identifiers around controls and assertion regions. Enable accessibility semantics in the test build and keep its `SemanticsHandle` alive (see [Flutter accessibility](https://docs.flutter.dev/ui/accessibility/web-accessibility)). ReleaseLens reads `flt-semantics-identifier` nodes and accessible assertion text; it does not click canvas coordinates. IDs must be unique for the current page. Host Flutter renderer assets locally, for example build with `flutter build web --release --no-web-resources-cdn`; otherwise deliberately allow every external asset origin. The included acceptance sample uses a release CanvasKit build, not an HTML stand-in. Other Flutter versions/renderers need project-specific acceptance before use.
 
+A captured assertion from the real Flutter acceptance sample (synthetic data):
+
+![Flutter task completed through semantics](assets/flutter-web-assertion.png)
+
 ## Network, authentication and trust
 
 Allow only the target origins and required assets/API paths. `/` allows every route on an allowed origin; `/demo/` permits that subtree; `/login` permits exactly that path. **HTTP redirects fail closed** in this release, including redirects between allowed URLs. Configure the final URL; avoid redirecting authentication flows. Service workers, downloads and extra windows are blocked. WebSockets use the same origin/path policy. Allowlists are a guardrail for reviewed apps, not a sandbox for hostile websites or Maestro scripts.
