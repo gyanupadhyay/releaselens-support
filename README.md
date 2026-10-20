@@ -2,7 +2,7 @@
 
 Record reviewed Android emulator and web scenarios with local narration, captions and evidence. Install the public pre-release from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=gyanupadhyay.releaselens-ai), or download an audited VSIX from [Releases](https://github.com/gyanupadhyay/releaselens-support/releases). Select **Switch to Pre-Release Version** in VS Code.
 
-0.2.0 is published. The 0.2.1 security and reliability update is undergoing final release checks; its availability will be announced here after publication.
+[0.2.1 is available as an audited VSIX](https://github.com/gyanupadhyay/releaselens-support/releases/tag/v0.2.1). All release checks passed. The Marketplace update has been submitted and is awaiting validation; its previously published version remains available meanwhile.
 
 ## Start here
 
