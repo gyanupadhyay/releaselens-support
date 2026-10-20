@@ -1,23 +1,24 @@
-﻿# ReleaseLens AI support
+# ReleaseLens AI support
 
-Public documentation and issue tracking for the ReleaseLens AI VS Code extension. The implementation repository remains private.
+Record reviewed Android emulator and web scenarios with local narration, captions and evidence. Install the public pre-release from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=gyanupadhyay.releaselens-ai), or download an audited VSIX from [Releases](https://github.com/gyanupadhyay/releaselens-support/releases). Select **Switch to Pre-Release Version** in VS Code.
 
-Public pre-release download: https://github.com/gyanupadhyay/releaselens-support/releases/tag/v0.2.0
+0.2.0 is published. The 0.2.1 security and reliability update is undergoing final release checks; its availability will be announced here after publication.
 
-Marketplace package submitted: https://marketplace.visualstudio.com/items?itemName=gyanupadhyay.releaselens-ai
+## Start here
 
-The Marketplace version is not yet marked validated and its listing currently returns 404. Use the verified GitHub release VSIX for manual installation while Marketplace validation is unresolved.
+- [Complete user guide](docs/USER_GUIDE.md): installation, configuration, flow examples, Flutter web semantics, tokens, authentication, outputs, subtitles, cleanup and recovery.
+- [CLI and deployment integration](docs/CI_SETUP.md): running the bundled CLI, receipt creation and authenticated APK artifact provenance.
+- [Architecture and security boundaries](docs/ARCHITECTURE.md), [review fixes](docs/REVIEW_FIXES.md), [changelog](CHANGELOG.md).
+- [Troubleshooting](docs/TROUBLESHOOTING.md), [privacy](PRIVACY.md), [security reporting](SECURITY.md).
 
-The 0.2.0 pre-release records reviewed Android emulator and web scenarios, composes MP4 videos with local system narration and captions, and matches PR metadata to registered scenario tags. Cloud AI planning and ElevenLabs are disabled; no cloud speech or AI account is required. iOS and physical-device farms are not supported.
+## Requirements and scope
 
-## Requirements
+VS Code 1.106+, FFmpeg 6+ and ffprobe on PATH. Web needs the pinned Chromium installed through **Set Up Tools**. Android needs adb, Java 17+, Maestro 2.11, a booted emulator and a single built APK. Linux speech requires espeak; Windows/macOS use local system speech. Restart VS Code after changing tool PATH.
 
-VS Code 1.106 or newer, FFmpeg 6 or newer, and ffprobe on PATH. Web recording needs pinned Chromium, installed through ReleaseLens: Set Up Tools. Android needs an Android emulator, adb, Java, Maestro, and your built APK. Linux narration needs espeak; Windows and macOS use system speech.
+Windows x64, Linux x64 and macOS Intel are the desktop hosts checked. Full Android and Flutter CanvasKit acceptance runs on Windows; project-specific target combinations require validation. iOS, physical devices, split APKs, Flutter desktop, Firefox/WebKit, VS Code Web and ARM host acceptance remain pending. Cloud AI/ElevenLabs are disabled; no cloud account is needed.
 
-## Getting started
+Use only trusted projects, reviewed flows, synthetic data and test identities. The Android example clears app data. Captions are selectable subtitles. Videos/screenshots are not anonymized.
 
-Download the VSIX from Releases. In VS Code, open Extensions, choose the three-dot menu and Install from VSIX. Then open a trusted project and choose ReleaseLens: Initialize Project. Review the generated configuration and flow files for your app ID, APK, URLs and selectors. Check prerequisites using ReleaseLens: Set Up Tools, then choose Plan & generate in the sidebar. Always record synthetic data and test accounts.
+Report problems through [issues](https://github.com/gyanupadhyay/releaselens-support/issues) with tool versions and sanitized logs. Report vulnerabilities privately using SECURITY.md. Never attach tokens, auth state or customer recordings.
 
-## Report a problem
-
-Open an issue with your OS, VS Code and extension versions, target platform, steps to reproduce, and sanitized diagnostics. Never upload API keys, passwords, personal recordings or private source code. Videos and screenshots are not automatically anonymized. See PRIVACY.md.
+This public repository provides documentation, support and release binaries. Implementation source remains private.
