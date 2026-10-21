@@ -65,3 +65,5 @@ References: [Apple Simulator recording](https://developer.apple.com/videos/play/
 ## Measured 0.3.0 acceptance
 
 Passed on the macOS Apple Silicon CI runner with Flutter 3.47.7, Xcode 16.4, iPhone 16 and iOS 26.2 Simulator. The installed bundle hash matched the source bundle, Maestro observed `Release demo task`, and local speech began after that assertion. The release video is included with the GitHub pre-release. Full Apple Silicon VS Code host and Intel iOS Simulator acceptance remain pending.
+
+[Watch/download the real narrated iOS recording](https://github.com/gyanupadhyay/releaselens-support/releases/download/v0.3.0/releaselens-ios-demo.mp4). The task data is synthetic.
