@@ -34,7 +34,7 @@ Initialization creates `.releaselens/config.json`, `scenarios.json` and `flows/`
 }
 ```
 
-`platform` is `web` or `flutter-android`. For Android add `android: {"apkPath":"build/app/outputs/flutter-apk/app-debug.apk","appId":"com.example.your_app","device":"emulator-5554"}`. Build the single APK and boot the emulator first. Update the Maestro flow's `appId` too. Android requires adb, Java 17+ and Maestro 2.11.0. Portable Windows Maestro is supported by setting `RELEASELENS_MAESTRO_HOME` to its extracted directory containing `lib`, with `java` on PATH before launching VS Code. Use [official Maestro installation](https://docs.maestro.dev/getting-started/installing-maestro). The adapter never automatically builds, boots, or wipes an emulator. The example flow's **`clearState: true` clears the selected app's data**: use a disposable test identity and edit that command if inappropriate.
+`platform` is `web`, `flutter-android` or `flutter-ios` (see [iOS setup](IOS.md)). For Android add `android: {"apkPath":"build/app/outputs/flutter-apk/app-debug.apk","appId":"com.example.your_app","device":"emulator-5554"}`. Build the single APK and boot the emulator first. Update the Maestro flow's `appId` too. Android requires adb, Java 17+ and Maestro 2.11.0. Portable Windows Maestro is supported by setting `RELEASELENS_MAESTRO_HOME` to its extracted directory containing `lib`, with `java` on PATH before launching VS Code. Use [official Maestro installation](https://docs.maestro.dev/getting-started/installing-maestro). The adapter never automatically builds, boots, or wipes an emulator. The example flow's **`clearState: true` clears the selected app's data**: use a disposable test identity and edit that command if inappropriate.
 
 `registry`, `outputDir`, script paths and optional `web.storageState` must be project-relative without traversal or symlink escapes. Timeout is 10–170 seconds per scenario; split longer demos. Width/height are 320–1920; video fps is 15–60. `narration.provider` is `system` or `none`; `video.captions` controls the subtitle track. Optional `github: {"repository":"owner/repo","baseBranch":"main"}` enables PR analysis. Optional `web.releasePath: "/version"` enables verified web builds; return JSON `{"commitSha":"<full deployed SHA>"}`.
 
@@ -94,7 +94,8 @@ For problems include extension/VS Code/OS/tool versions, selected platform, and 
 | Desktop hosts | Windows x64, Linux x64 and macOS Intel: CLI/media/system speech and real VS Code packaged-host checks |
 | Android | Local x86_64 emulator, single APK, Maestro 2.11.0; full end-to-end acceptance on Windows |
 | Web | Pinned Chromium; HTML test IDs; Flutter semantics with a real Windows CanvasKit sample |
-| Pending | iOS, physical devices/device farms, split APKs, Flutter desktop, Firefox/WebKit, VS Code browser extension, ARM host acceptance |
+| iOS | Local Apple Silicon Simulator .app recording; see [iOS setup](IOS.md). iOS deployment receipts unsupported |
+| Pending | physical devices/device farms, split APKs, Flutter desktop, Firefox/WebKit, VS Code browser extension, ARM host acceptance |
 | Cloud | AI planning and ElevenLabs disabled; deterministic matching and local speech available |
 
 This is a public pre-release for the listed configurations. It is not a claim of production certification for every app, OS/device combination or hostile input. The implementation repository remains private; the public repository contains documentation, support and release binaries.

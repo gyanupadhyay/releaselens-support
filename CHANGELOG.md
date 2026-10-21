@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0
+
+- Add macOS iOS Simulator adapter: install a simulator .app, verify installed bundle contents, capture simctl video and collect Maestro assertion evidence.
+- Add iOS initialization, configuration schemas, simulator discovery/picker, diagnostics, cancellation, per-device leases and an isolated real iOS CI acceptance gate.
+- iOS supports local simulator demos; iOS deployment receipts, physical iPhones and Windows/Linux execution remain unsupported.
+- iOS requires macOS, Xcode with an installed iOS runtime, Java/Maestro and a prebuilt simulator .app. Read the iOS setup guide.
+
+
 ## 0.2.1
 
 - Block HTTP redirect chains before following a destination outside the reviewed request policy. Configure final URLs; redirects are unsupported.
