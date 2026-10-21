@@ -2,7 +2,7 @@
 
 Record reviewed Android emulator, iOS Simulator and web scenarios with local narration, captions and evidence. Install the public pre-release from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=gyanupadhyay.releaselens-ai), or download an audited VSIX from [Releases](https://github.com/gyanupadhyay/releaselens-support/releases). Select **Switch to Pre-Release Version** in VS Code.
 
-**0.3.0 adds iOS Simulator recording** and is [available as an audited GitHub VSIX](https://github.com/gyanupadhyay/releaselens-support/releases/tag/v0.3.0), with a real iOS sample video. All release checks passed. Marketplace submission is awaiting validation; 0.2.1 remains the validated Marketplace version meanwhile.
+**0.3.0 with iOS Simulator recording is live and validated on Marketplace.** The [identical audited VSIX and real iOS sample video are on GitHub](https://github.com/gyanupadhyay/releaselens-support/releases/tag/v0.3.0). All release checks passed, and the anonymous Marketplace download matches the exact tested archive SHA-256. Update through the pre-release channel.
 
 ## Start here
 
